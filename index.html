@@ -10,15 +10,34 @@
     <header>
         <div>
             <div>
-                <a><img src="" alt="" /></a>
+                <a id="dropDown"><img src="" alt="logo" />
+                    <div id="dropMenu">
+                        <a href="">*</a>
+                        <a href="">*</a>
+                        <a href="">*</a>
+                    </div>
+                </a>
             </div>
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
         </div>
     </header>
-    
+    <script>
+        document.getElementById("dropDown").onclick = function() {showOrHide()};
+
+        function showDiv() {
+            document.getElementById('dropMenu').style.display = "block";
+        }
+
+        function closeDiv() {
+          document.getElementById('dropMenu').style.display = "none";
+        }
+
+        function showOrHide() {
+            if (document.getElementById("dropMenu").style.display = "block") {
+                closeDiv()
+            } else {
+                showDiv()
+            }
+        }
+    </script>    
 </body>
 </html>
